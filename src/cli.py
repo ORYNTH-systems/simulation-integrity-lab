@@ -10,6 +10,11 @@ from events import SimulationEvent
 from mutator import WorldMutator
 from governor import SimulationGovernor
 
+from agent import Agent
+from authority import Authority
+from intent import Intent
+from resource import ResourceClaim
+
 
 def main():
 
@@ -47,6 +52,23 @@ def main():
         alternate["world"]
     )
 
+    agent_a = Agent(
+        agent_id="agent_a",
+        authority=Authority(level="standard", active=True),
+        intent=Intent(action="render_overlay", allowed=True),
+        resource=ResourceClaim(resource_id="display_channel", available=True)
+    )
+
+    agent_b = Agent(
+        agent_id="agent_b",
+        authority=Authority(level="standard", active=False),
+        intent=Intent(action="render_overlay", allowed=True),
+        resource=ResourceClaim(resource_id="display_channel", available=True)
+    )
+
+    agent_a_decision, agent_a_reason = agent_a.evaluate()
+    agent_b_decision, agent_b_reason = agent_b.evaluate()
+
     output = {
         "results":[r.__dict__ for r in results],
         "metrics":metrics,
@@ -60,6 +82,16 @@ def main():
             "alternate_reason":alternate_reason
         },
         "drift":drift,
+        "agents":{
+            "agent_a":{
+                "decision":agent_a_decision,
+                "reason":agent_a_reason
+            },
+            "agent_b":{
+                "decision":agent_b_decision,
+                "reason":agent_b_reason
+            }
+        },
         "status":"SIMULATION_INTEGRITY_ENGINE_ACTIVE"
     }
 

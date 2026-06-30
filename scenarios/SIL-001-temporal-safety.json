@@ -1,0 +1,26 @@
+{
+  "scenario_id": "SIL-001",
+  "title": "Temporal Safety Failure and Recovery",
+  "ticks": 16,
+  "events": [
+    {
+      "tick": 3,
+      "event_type": "safety_failure",
+      "payload": {
+        "reason": "scenario_safety_failure"
+      }
+    },
+    {
+      "tick": 6,
+      "event_type": "safety_recovery",
+      "payload": {
+        "reason": "scenario_safety_recovery"
+      }
+    }
+  ],
+  "expected": {
+    "total_ticks": 16,
+    "blocked_ticks": 3,
+    "status": "SCENARIO_EXECUTED"
+  }
+}

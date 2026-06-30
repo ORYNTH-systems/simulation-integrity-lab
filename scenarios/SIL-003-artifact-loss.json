@@ -1,0 +1,26 @@
+{
+  "scenario_id": "SIL-003",
+  "title": "Artifact Loss and Recovery",
+  "ticks": 16,
+  "events": [
+    {
+      "tick": 5,
+      "event_type": "artifact_loss",
+      "payload": {
+        "reason": "scenario_artifact_loss"
+      }
+    },
+    {
+      "tick": 9,
+      "event_type": "artifact_recovery",
+      "payload": {
+        "reason": "scenario_artifact_recovery"
+      }
+    }
+  ],
+  "expected": {
+    "total_ticks": 16,
+    "blocked_ticks": 4,
+    "status": "SCENARIO_EXECUTED"
+  }
+}

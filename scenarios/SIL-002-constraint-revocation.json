@@ -1,0 +1,26 @@
+{
+  "scenario_id": "SIL-002",
+  "title": "Constraint Revocation and Recovery",
+  "ticks": 16,
+  "events": [
+    {
+      "tick": 4,
+      "event_type": "constraint_revocation",
+      "payload": {
+        "reason": "scenario_constraint_revocation"
+      }
+    },
+    {
+      "tick": 8,
+      "event_type": "constraint_recovery",
+      "payload": {
+        "reason": "scenario_constraint_recovery"
+      }
+    }
+  ],
+  "expected": {
+    "total_ticks": 16,
+    "blocked_ticks": 4,
+    "status": "SCENARIO_EXECUTED"
+  }
+}

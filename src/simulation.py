@@ -2,6 +2,8 @@ from world import WorldState
 from governor import SimulationGovernor
 from timeline import SimulationTimeline
 from tick import TickResult
+from scheduler import EventScheduler
+from mutator import WorldMutator
 
 
 class Simulation:
@@ -10,8 +12,15 @@ class Simulation:
         self.world = WorldState()
         self.governor = SimulationGovernor()
         self.timeline = SimulationTimeline()
+        self.scheduler = EventScheduler()
+        self.mutator = WorldMutator()
 
     def step(self):
+        scheduled_events = self.scheduler.events_for_tick(self.world.tick)
+
+        for event in scheduled_events:
+            self.world = self.mutator.apply(self.world, event)
+
         decision, reason = self.governor.evaluate(self.world)
 
         result = TickResult(

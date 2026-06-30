@@ -1,16 +1,18 @@
-from scenario_runner import ScenarioRunner
+from mutation_engine import WorldMutationEngine
 
 
 class ScenarioExecution:
 
     def __init__(self):
-        self.runner = ScenarioRunner()
 
-    def event_map(self, scenario):
+        self.mutator = WorldMutationEngine()
 
-        events = {}
+    def execute_tick(self, world, tick, events):
 
-        for event in scenario.get("events", []):
-            events.setdefault(event["tick"], []).append(event)
+        if tick not in events:
+            return world
 
-        return events
+        for event in events[tick]:
+            self.mutator.apply(world, event)
+
+        return world

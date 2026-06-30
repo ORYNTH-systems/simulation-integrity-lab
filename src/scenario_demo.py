@@ -1,35 +1,36 @@
+from world import WorldState
 from scenario_runner import ScenarioRunner
 from scenario_execution import ScenarioExecution
 
-
 runner = ScenarioRunner()
+execution = ScenarioExecution()
+
+world = WorldState()
 
 scenario = runner.load("SIL-001-temporal-safety.json")
+
+events = {}
+
+for event in scenario["events"]:
+    events.setdefault(event["tick"], []).append(event)
 
 print()
 
 print("Scenario:", scenario["scenario_id"])
-print("Title:", scenario["title"])
-
 print()
-
-execution = ScenarioExecution()
-
-events = execution.event_map(scenario)
 
 for tick in range(scenario["ticks"]):
 
-    print(f"Tick {tick}")
+    world.tick = tick
 
-    if tick in events:
+    execution.execute_tick(world, tick, events)
 
-        for event in events[tick]:
-
-            print(
-                "   EVENT:",
-                event["event_type"],
-                event["payload"]["reason"]
-            )
+    print(
+        tick,
+        world.safety,
+        world.constraints,
+        world.artifact
+    )
 
 print()
 

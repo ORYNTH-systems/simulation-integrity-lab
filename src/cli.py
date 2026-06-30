@@ -15,6 +15,9 @@ from authority import Authority
 from intent import Intent
 from resource import ResourceClaim
 
+from proposal import Proposal
+from negotiation import NegotiationEngine
+
 
 def main():
 
@@ -69,6 +72,25 @@ def main():
     agent_a_decision, agent_a_reason = agent_a.evaluate()
     agent_b_decision, agent_b_reason = agent_b.evaluate()
 
+    proposals = [
+        Proposal(
+            proposal_id="proposal_a",
+            proposer_id="agent_a",
+            action="claim_display_channel",
+            resource_id="display_channel",
+            priority=2
+        ),
+        Proposal(
+            proposal_id="proposal_b",
+            proposer_id="agent_b",
+            action="claim_display_channel",
+            resource_id="display_channel",
+            priority=1
+        )
+    ]
+
+    negotiation = NegotiationEngine().negotiate(proposals)
+
     output = {
         "results":[r.__dict__ for r in results],
         "metrics":metrics,
@@ -92,6 +114,7 @@ def main():
                 "reason":agent_b_reason
             }
         },
+        "negotiation":negotiation,
         "status":"SIMULATION_INTEGRITY_ENGINE_ACTIVE"
     }
 

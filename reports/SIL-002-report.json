@@ -1,0 +1,343 @@
+{
+    "scenario_id": "SIL-002",
+    "title": "Constraint Revocation and Recovery",
+    "history": [
+        {
+            "tick": 0,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 0,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 1,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 1,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 2,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 2,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 3,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 3,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 4,
+            "decision": {
+                "decision": "BLOCK",
+                "reason": "scenario_constraint_revocation"
+            },
+            "snapshot": {
+                "tick": 4,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 5,
+            "decision": {
+                "decision": "BLOCK",
+                "reason": "scenario_constraint_revocation"
+            },
+            "snapshot": {
+                "tick": 5,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 6,
+            "decision": {
+                "decision": "BLOCK",
+                "reason": "scenario_constraint_revocation"
+            },
+            "snapshot": {
+                "tick": 6,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 7,
+            "decision": {
+                "decision": "BLOCK",
+                "reason": "scenario_constraint_revocation"
+            },
+            "snapshot": {
+                "tick": 7,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 8,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 8,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 9,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 9,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 10,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 10,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 11,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 11,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 12,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 12,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 13,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 13,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 14,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 14,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 15,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 15,
+                "entities": {},
+                "constraints": {
+                    "admissible": true,
+                    "reason": "scenario_constraint_recovery"
+                },
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        }
+    ],
+    "status": "SCENARIO_EXECUTED"
+}

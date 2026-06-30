@@ -2,6 +2,7 @@ import json
 import sys
 from simulation import Simulation
 from metrics import SimulationMetrics
+from replay import SimulationReplay
 
 
 def main():
@@ -14,10 +15,12 @@ def main():
     results = sim.run(ticks)
 
     metrics = SimulationMetrics().summarize(sim.timeline)
+    replay = SimulationReplay().verify_determinism(sim.timeline)
 
     output = {
         "results": [r.__dict__ for r in results],
         "metrics": metrics,
+        "replay": replay,
         "status": "SIMULATION_INTEGRITY_ENGINE_ACTIVE"
     }
 

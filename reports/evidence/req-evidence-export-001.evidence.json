@@ -1,5 +1,5 @@
 {
-    "evidence_id": "314bc611-d376-4576-a14d-de19f9ab2d93",
+    "evidence_id": "2b1340dc-340b-401d-a156-62d2af00b46e",
     "execution_id": "req-evidence-export-001",
     "decision": "PASS",
     "reason": "constitutional_pipeline_passed",
@@ -9,7 +9,7 @@
             "decision": "PASS",
             "reason": "entity_constitutionally_admissible",
             "metadata": {
-                "elapsed_ms": 0.002
+                "elapsed_ms": 0.003
             }
         },
         {
@@ -25,7 +25,7 @@
             "decision": "PASS",
             "reason": "delegation_constitutionally_valid",
             "metadata": {
-                "elapsed_ms": 0.002
+                "elapsed_ms": 0.003
             }
         },
         {
@@ -41,7 +41,7 @@
             "decision": "PASS",
             "reason": "resource_valid",
             "metadata": {
-                "elapsed_ms": 0.0
+                "elapsed_ms": 0.001
             }
         },
         {
@@ -57,5 +57,5 @@
         "schema": "ORYNTH_CONSTITUTIONAL_EVIDENCE_OBJECT",
         "version": "0.1"
     },
-    "evidence_hash": "4e108fd44232ec5c9aaba9361d6444c91eed4841f600d8247da015f496f38c22"
+    "evidence_hash": "deee93c668489b5348d0b5ff9115ec0bcbcee5e33fea31e85e5b099097653929"
 }

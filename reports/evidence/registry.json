@@ -1,0 +1,11 @@
+[
+    {
+        "execution_id": "req-evidence-export-001",
+        "evidence_id": "2b1340dc-340b-401d-a156-62d2af00b46e",
+        "decision": "PASS",
+        "reason": "constitutional_pipeline_passed",
+        "evidence_hash": "deee93c668489b5348d0b5ff9115ec0bcbcee5e33fea31e85e5b099097653929",
+        "path": "reports\\evidence\\req-evidence-export-001.evidence.json",
+        "registered_at": "2026-07-01T04:38:10.735634+00:00"
+    }
+]

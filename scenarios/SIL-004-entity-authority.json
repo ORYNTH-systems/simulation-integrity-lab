@@ -1,0 +1,29 @@
+{
+  "scenario_id": "SIL-004",
+  "title": "Entity Spawn and Authority Revocation",
+  "ticks": 12,
+  "events": [
+    {
+      "tick": 1,
+      "event_type": "entity_spawn",
+      "payload": {
+        "entity_id": "agent_001",
+        "entity_type": "agent",
+        "reason": "scenario_entity_spawn"
+      }
+    },
+    {
+      "tick": 5,
+      "event_type": "entity_authority_revoked",
+      "payload": {
+        "entity_id": "agent_001",
+        "reason": "scenario_entity_authority_revoked"
+      }
+    }
+  ],
+  "expected": {
+    "total_ticks": 12,
+    "entity": "agent_001",
+    "status": "SCENARIO_EXECUTED"
+  }
+}

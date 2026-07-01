@@ -1,3 +1,6 @@
+from entity import RichEntity
+
+
 class WorldMutationEngine:
 
     def apply(self, world, event):
@@ -29,6 +32,25 @@ class WorldMutationEngine:
         elif event_type == "artifact_recovery":
             world.artifact["present"] = True
             world.artifact["reason"] = reason
+
+        elif event_type == "entity_spawn":
+            entity = RichEntity(
+                entity_id=payload["entity_id"],
+                entity_type=payload.get("entity_type", "agent")
+            )
+            world.entities.add(entity)
+
+        elif event_type == "entity_authority_revoked":
+            entity = world.entities.get(payload["entity_id"])
+            if entity:
+                entity.authority["active"] = False
+                entity.authority["reason"] = reason
+
+        elif event_type == "entity_resource_loss":
+            entity = world.entities.get(payload["entity_id"])
+            if entity:
+                entity.resources["available"] = False
+                entity.resources["reason"] = reason
 
         else:
             world.constraints["admissible"] = False

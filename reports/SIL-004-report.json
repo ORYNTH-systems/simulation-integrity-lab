@@ -1,0 +1,476 @@
+{
+    "scenario_id": "SIL-004",
+    "title": "Entity Spawn and Authority Revocation",
+    "history": [
+        {
+            "tick": 0,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 0,
+                "entities": {},
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 1,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 1,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 2,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 2,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 3,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 3,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 4,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 4,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 5,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 5,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 6,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 6,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 7,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 7,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 8,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 8,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 9,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 9,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 10,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 10,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        },
+        {
+            "tick": 11,
+            "decision": {
+                "decision": "PASS",
+                "reason": "constitutional_state_preserved"
+            },
+            "snapshot": {
+                "tick": 11,
+                "entities": {
+                    "agent_001": {
+                        "entity_id": "agent_001",
+                        "entity_type": "agent",
+                        "identity": {
+                            "valid": true
+                        },
+                        "authority": {
+                            "active": false,
+                            "reason": "scenario_entity_authority_revoked"
+                        },
+                        "intent": {
+                            "allowed": true
+                        },
+                        "resources": {
+                            "available": true
+                        },
+                        "constraints": {
+                            "satisfied": true
+                        },
+                        "state": {},
+                        "history_length": 0
+                    }
+                },
+                "constraints": {},
+                "safety": {
+                    "safe": true
+                },
+                "artifact": {
+                    "present": true
+                }
+            }
+        }
+    ],
+    "status": "SCENARIO_EXECUTED"
+}

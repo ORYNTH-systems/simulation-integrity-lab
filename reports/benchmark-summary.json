@@ -1,8 +1,8 @@
 {
     "benchmark": "Simulation Integrity Lab",
     "version": "v0.2",
-    "scenario_count": 3,
-    "fully_passed": 0,
+    "scenario_count": 4,
+    "fully_passed": 1,
     "blocked": 3,
-    "reports": 3
+    "reports": 4
 }

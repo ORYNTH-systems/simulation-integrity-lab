@@ -1,0 +1,61 @@
+{
+    "evidence_id": "314bc611-d376-4576-a14d-de19f9ab2d93",
+    "execution_id": "req-evidence-export-001",
+    "decision": "PASS",
+    "reason": "constitutional_pipeline_passed",
+    "trace": [
+        {
+            "stage": "Identity",
+            "decision": "PASS",
+            "reason": "entity_constitutionally_admissible",
+            "metadata": {
+                "elapsed_ms": 0.002
+            }
+        },
+        {
+            "stage": "Authority",
+            "decision": "PASS",
+            "reason": "authority_valid",
+            "metadata": {
+                "elapsed_ms": 0.001
+            }
+        },
+        {
+            "stage": "Delegation",
+            "decision": "PASS",
+            "reason": "delegation_constitutionally_valid",
+            "metadata": {
+                "elapsed_ms": 0.002
+            }
+        },
+        {
+            "stage": "Intent",
+            "decision": "PASS",
+            "reason": "intent_valid",
+            "metadata": {
+                "elapsed_ms": 0.001
+            }
+        },
+        {
+            "stage": "Resource",
+            "decision": "PASS",
+            "reason": "resource_valid",
+            "metadata": {
+                "elapsed_ms": 0.0
+            }
+        },
+        {
+            "stage": "World",
+            "decision": "PASS",
+            "reason": "world_state_valid",
+            "metadata": {
+                "elapsed_ms": 0.001
+            }
+        }
+    ],
+    "metadata": {
+        "schema": "ORYNTH_CONSTITUTIONAL_EVIDENCE_OBJECT",
+        "version": "0.1"
+    },
+    "evidence_hash": "4e108fd44232ec5c9aaba9361d6444c91eed4841f600d8247da015f496f38c22"
+}

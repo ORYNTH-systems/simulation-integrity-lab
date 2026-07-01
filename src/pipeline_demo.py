@@ -5,21 +5,7 @@ from entity import RichEntity
 from delegation import Delegation
 from execution_request import ExecutionRequest
 from execution_context import ExecutionContext
-
-from pipeline import ConstitutionalPipeline
-
-from stages.identity_stage import IdentityStage
-from stages.delegation_stage import DelegationStage
-
-pipeline = ConstitutionalPipeline()
-
-pipeline.add_stage(
-    IdentityStage()
-)
-
-pipeline.add_stage(
-    DelegationStage()
-)
+from kernel import ConstitutionalKernel
 
 world = WorldState()
 
@@ -52,9 +38,11 @@ context = ExecutionContext(
     tick=5
 )
 
+kernel = ConstitutionalKernel()
+
 print(
     json.dumps(
-        pipeline.evaluate(context),
+        kernel.evaluate(context),
         indent=4
     )
 )

@@ -1,3 +1,6 @@
+from trace import ConstitutionalTrace
+
+
 class ConstitutionalPipeline:
 
     def __init__(self):
@@ -10,14 +13,32 @@ class ConstitutionalPipeline:
 
     def evaluate(self, context):
 
+        trace = ConstitutionalTrace(
+            execution_id=context.request.request_id
+        )
+
         for stage in self.stages:
 
             result = stage.evaluate(context)
 
-            if result["decision"] == "BLOCK":
-                return result
+            trace.add_stage(
+                stage=stage.name,
+                decision=result["decision"],
+                reason=result["reason"]
+            )
 
-        return {
-            "decision": "PASS",
-            "reason": "constitutional_pipeline_passed"
-        }
+            if result["decision"] == "BLOCK":
+
+                trace.finalize(
+                    "BLOCK",
+                    result["reason"]
+                )
+
+                return trace.to_json()
+
+        trace.finalize(
+            "PASS",
+            "constitutional_pipeline_passed"
+        )
+
+        return trace.to_json()

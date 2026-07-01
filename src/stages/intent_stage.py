@@ -1,4 +1,9 @@
-class IntentStage:
+from stages.base_stage import ConstitutionalStage
+
+
+class IntentStage(ConstitutionalStage):
+
+    name = "Intent"
 
     def evaluate(self, context):
 

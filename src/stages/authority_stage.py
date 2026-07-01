@@ -1,4 +1,9 @@
-class AuthorityStage:
+from stages.base_stage import ConstitutionalStage
+
+
+class AuthorityStage(ConstitutionalStage):
+
+    name = "Authority"
 
     def evaluate(self, context):
 

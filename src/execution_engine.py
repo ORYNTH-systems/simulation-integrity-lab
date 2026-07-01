@@ -9,22 +9,16 @@ class ConstitutionalExecutionEngine:
         self.entity_engine = EntityDecisionEngine()
         self.delegation_engine = DelegationEngine()
 
-    def evaluate(
-        self,
-        requester,
-        delegation,
-        request,
-        tick
-    ):
+    def evaluate(self, context):
 
-        entity = self.entity_engine.evaluate(requester)
+        entity = self.entity_engine.evaluate(context.requester)
 
         if entity["decision"] == "BLOCK":
             return entity
 
         delegated = self.delegation_engine.evaluate(
-            delegation,
-            tick
+            context.delegation,
+            context.tick
         )
 
         if delegated["decision"] == "BLOCK":
@@ -33,5 +27,8 @@ class ConstitutionalExecutionEngine:
         return {
             "decision": "PASS",
             "reason": "execution_constitutionally_admissible",
-            "action": request.action
+            "action": context.request.action,
+            "request_id": context.request.request_id,
+            "requester": context.requester.entity_id,
+            "tick": context.tick
         }

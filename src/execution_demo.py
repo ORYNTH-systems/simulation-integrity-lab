@@ -1,9 +1,13 @@
 import json
 
+from world import WorldState
 from entity import RichEntity
 from delegation import Delegation
 from execution_request import ExecutionRequest
+from execution_context import ExecutionContext
 from execution_engine import ConstitutionalExecutionEngine
+
+world = WorldState()
 
 entity = RichEntity(
     entity_id="robot_001",
@@ -26,13 +30,16 @@ request = ExecutionRequest(
     payload={}
 )
 
-engine = ConstitutionalExecutionEngine()
-
-result = engine.evaluate(
-    entity,
-    delegation,
-    request,
+context = ExecutionContext(
+    world=world,
+    requester=entity,
+    delegation=delegation,
+    request=request,
     tick=5
 )
+
+engine = ConstitutionalExecutionEngine()
+
+result = engine.evaluate(context)
 
 print(json.dumps(result, indent=2))

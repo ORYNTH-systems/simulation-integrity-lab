@@ -1,22 +1,42 @@
+from state_explorer import StateExplorer
+from goal_evaluator import GoalEvaluator
+
+
 class ConstitutionalPlanner:
 
-    def evaluate(self, futures):
+    def __init__(self):
 
-        evaluated = []
+        self.explorer = StateExplorer()
+        self.goal_evaluator = GoalEvaluator()
 
-        for future in futures:
+    def plan(self, graph, goal):
 
-            decision = "PASS"
+        satisfying_nodes = self.goal_evaluator.satisfying_nodes(
+            graph,
+            goal
+        )
 
-            if "constraint_failure" in future["id"]:
-                decision = "BLOCK"
+        admissible_goal_nodes = [
+            node
+            for node in satisfying_nodes
+            if node.admissible
+        ]
 
-            if "safety_failure" in future["id"]:
-                decision = "BLOCK"
+        if not admissible_goal_nodes:
+            return {
+                "plan_found": False,
+                "reason": "no_admissible_goal_state"
+            }
 
-            evaluated.append({
-                "future": future["id"],
-                "decision": decision
-            })
+        selected = admissible_goal_nodes[0]
 
-        return evaluated
+        return {
+            "plan_found": True,
+            "selected_node": selected.node_id,
+            "mutation_id": selected.mutation_id,
+            "path": self.explorer.path_to_root(
+                graph,
+                selected.node_id
+            ),
+            "reason": "admissible_goal_state_found"
+        }

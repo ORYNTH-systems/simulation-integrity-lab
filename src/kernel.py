@@ -4,6 +4,7 @@ from stages.identity_stage import IdentityStage
 from stages.authority_stage import AuthorityStage
 from stages.delegation_stage import DelegationStage
 from stages.intent_stage import IntentStage
+from stages.resource_stage import ResourceStage
 
 
 class ConstitutionalKernel:
@@ -16,6 +17,7 @@ class ConstitutionalKernel:
         self.pipeline.add_stage(AuthorityStage())
         self.pipeline.add_stage(DelegationStage())
         self.pipeline.add_stage(IntentStage())
+        self.pipeline.add_stage(ResourceStage())
 
     def evaluate(self, context):
 

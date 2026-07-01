@@ -1,9 +1,22 @@
-from dataclasses import dataclass
-from typing import Dict, Any
+from copy import deepcopy
 
 
-@dataclass
-class CounterfactualState:
-    state_id: str
-    description: str
-    world: Dict[str, Any]
+class CounterfactualEngine:
+
+    def evaluate(
+
+        self,
+
+        kernel,
+
+        context,
+
+        mutator
+
+    ):
+
+        new_context = deepcopy(context)
+
+        mutator(new_context)
+
+        return kernel.evaluate(new_context)
